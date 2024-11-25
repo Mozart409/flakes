@@ -30,7 +30,7 @@
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
     less
-
+ 
     # steam
     steam
     steam-run
@@ -38,6 +38,13 @@
     openrgb-with-all-plugins
     gparted
     alacritty
+
+    nixfmt-rfc-style
+    nil
+    git-credential-oauth
+
+    tor-browser
+
   ];
 
   # Programs natively supported by home-manager.
