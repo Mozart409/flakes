@@ -17,7 +17,6 @@
   # Nix
 
   nix = {
-    # autoOptimiseStore = true;
     settings.auto-optimise-store = true;
     extraOptions = ''
       experimental-features = nix-command flakes
@@ -26,7 +25,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 7d";
+      options = "--delete-older-than 3d";
     };
   };
 
@@ -175,6 +174,7 @@
     curl
 	  neovim
 	  tree
+    tailscale
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -189,6 +189,8 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
+  services.tailscale.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

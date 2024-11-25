@@ -15,7 +15,8 @@
     nnn
     gh
     glow
-
+    git 
+    git-credential-oauth
 
     # Nix dev
     cachix
@@ -29,6 +30,14 @@
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
     less
+
+    # steam
+    steam
+    steam-run
+
+    openrgb-with-all-plugins
+    gparted
+    alacritty
   ];
 
   # Programs natively supported by home-manager.
@@ -43,6 +52,11 @@
     btop.enable = true;
 
     tmux.enable = true;
+
+    alacritty.enable = true;
+
+
+#    steam.enable = true;
 
     fish = {
       enable = true;
