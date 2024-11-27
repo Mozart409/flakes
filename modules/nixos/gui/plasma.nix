@@ -16,8 +16,7 @@
     pkgs.arc-kde-theme
   ];
 
-  programs = {
-    plasma = {
+  /* programs.plasma = {
       enable = true;
       workspace = {
         clickItemTo = "select";
@@ -27,7 +26,6 @@
         iconTheme = "Breeze-Dark";
         wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Qogir-ubuntu-dark/contents/image/1920x1080.jpg";
       };
-    };
-  };
+    }; */
 
 }

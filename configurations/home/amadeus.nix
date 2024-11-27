@@ -9,5 +9,5 @@ in
   ];
   home.username = "amadeus";
   home.homeDirectory = lib.mkDefault "/${if pkgs.stdenv.isDarwin then "Users" else "home"}/amadeus";
-  home.stateVersion = "22.11";
+  home.stateVersion = "24.05";
 }

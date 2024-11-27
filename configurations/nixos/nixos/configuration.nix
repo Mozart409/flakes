@@ -30,6 +30,19 @@
     };
   };
 
+  programs.plasma = {
+    enable = true;
+    workspace = {
+      clickItemTo = "select";
+      # lookAndFeel = "org.kde.breezedark.desktop";
+      lookAndFeel = "com.github.vinceliuice.Qogir-dark";
+      cursor.theme = "Sweet-cursor";
+      iconTheme = "Breeze-Dark";
+      wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Qogir-ubuntu-dark/contents/image/1920x1080.jpg";
+    };
+  };
+
+
   # fonts
   fonts.fontDir.enable = true;
   fonts.fontconfig.enable = true;
