@@ -164,6 +164,7 @@
       dina-font
       docker-compose
       lazydocker
+      xclip
     ];
   };
 
