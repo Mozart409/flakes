@@ -24,7 +24,7 @@
     # UI
     web-devicons.enable = true;
     lualine.enable = true;
-    bufferline.enable = true;
+    bufferline.enable = false;
     treesitter.enable = true;
     conform-nvim.enable = true;
     emmet.enable = true;
@@ -43,7 +43,9 @@
     mini = {
       enable = true;
       modules = {
-        icons = {};
+        icons = {
+          enable = true;
+        };
       };
     };
 
@@ -51,7 +53,7 @@
       enable = true;
       autoCleanAfterSessionRestore = true;
       closeIfLastWindow = true;
-      };
+    };
     noice = {
       # WARNING: This is considered experimental feature, but provides nice UX
       enable = true;
@@ -80,7 +82,7 @@
       };
     };
 
-      # Dev
+    # Dev
     lsp = {
       enable = true;
       servers = {

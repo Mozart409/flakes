@@ -14,8 +14,8 @@
       ignores = [ "*~" "*.swp" ];
       aliases = {
         ci = "commit";
-	      s = "status";
-	      f = "fetch";
+        s = "status";
+        f = "fetch";
       };
       extraConfig = {
         init.defaultBranch = "main";
