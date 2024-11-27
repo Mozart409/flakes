@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = lib.mkDefault true;
+  services.desktopManager.plasma6.enable = lib.mkDefault true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -11,14 +11,13 @@
   };
 
   environment.systemPackages = with pkgs; [
+    pkgs.plasma
     pkgs.qogir-kde
-    # Cursor
     pkgs.sweet-nova
-    # Window style
     pkgs.arc-kde-theme
   ];
 
-  programs.plasma = {
+  /* programs.plasma = {
     enable = true;
 
     #
@@ -32,6 +31,6 @@
       iconTheme = "Breeze-Dark";
       # wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
     };
-  };
+  }; */
 
 }
