@@ -11,26 +11,23 @@
   };
 
   environment.systemPackages = with pkgs; [
-    pkgs.plasma
     pkgs.qogir-kde
     pkgs.sweet-nova
     pkgs.arc-kde-theme
   ];
 
-  /* programs.plasma = {
-    enable = true;
-
-    #
-    # Some high-level settings:
-    #
-    workspace = {
-      clickItemTo = "select";
-      # lookAndFeel = "org.kde.breezedark.desktop";
-      lookAndFeel = "com.github.vinceliuice.Qogir-dark";
-      cursor.theme = "Sweet-cursor";
-      iconTheme = "Breeze-Dark";
-      # wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
+  programs = {
+    plasma = {
+      enable = true;
+      workspace = {
+        clickItemTo = "select";
+        # lookAndFeel = "org.kde.breezedark.desktop";
+        lookAndFeel = "com.github.vinceliuice.Qogir-dark";
+        cursor.theme = "Sweet-cursor";
+        iconTheme = "Breeze-Dark";
+        wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Qogir-ubuntu-dark/contents/image/1920x1080.jpg";
+      };
     };
-  }; */
+  };
 
 }
