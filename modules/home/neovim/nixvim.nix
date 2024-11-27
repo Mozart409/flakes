@@ -1,7 +1,7 @@
 # Neovim configuration managed using https://github.com/nix-community/nixvim
 {
   # Theme
-  colorschemes.tokyonight.enable = true;
+  colorschemes.kanagawa.enable = true;
 
   # Settings
   opts = {
@@ -12,12 +12,28 @@
     number = true;
     relativenumber = true;
     clipboard = "unnamedplus";
+    # Always show the signcolumn, otherwise text would be shifted when displaying error icons
+    signcolumn = "yes";
   };
 
   # Keymaps
   globals = {
     mapleader = " ";
   };
+
+  keymaps = [{
+    action = "<cmd>Neotree toggle<CR>";
+    key = "<leader>fe";
+  }
+    # Lazygit
+    {
+      mode = "n";
+      key = "<leader>gg";
+      action = "<cmd>LazyGit<CR>";
+      options = {
+        desc = "LazyGit (root dir)";
+      };
+    }];
 
   plugins = {
 
@@ -35,7 +51,7 @@
     nvim-autopairs.enable = true;
     dashboard.enable = true;
     gitsigns.enable = true;
-    notify.enable = true;
+    notify.enable = false;
     which-key = {
       enable = true;
     };
