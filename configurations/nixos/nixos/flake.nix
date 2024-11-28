@@ -30,15 +30,18 @@
                   ({ pkgs, ... }: {
                     # TODO: Put your /etc/nixos/hardware-configuration.nix here
                     boot.loader.grub.device = "nodev";
+                    boot.loader.grub.useOSProber = true;
+
                     fileSystems."/" = { device = "/dev/disk/by-label/nixos"; fsType = "btrfs"; };
                     users.users.${myUserName}.isNormalUser = true;
-                    system.stateVersion = "23.05";
+                    system.stateVersion = "24.05";
                   })
                   # Setup home-manager in NixOS config
                   {
                     home-manager.users.${myUserName} = {
                       imports = [ self.homeModules.default ];
-                      home.stateVersion = "22.11";
+                      home-manager.backupFileExtension = "hm-backup";
+                      home.stateVersion = "24.05";
                     };
                   }
                 ];
@@ -50,6 +53,9 @@
             programs.git.enable = true;
             programs.starship.enable = true;
             programs.bash.enable = true;
+            programs.zsh.enable = true;
+            programs.fish.enable = true;
+            home-manager.backupFileExtension = "hm-backup";
           };
         };
     };

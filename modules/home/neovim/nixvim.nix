@@ -2,6 +2,8 @@
 {
   # Theme
   colorschemes.kanagawa.enable = true;
+  colorschemes.oxocarbon.enable = false;
+
 
   # Settings
   opts = {
@@ -21,10 +23,15 @@
     mapleader = " ";
   };
 
-  keymaps = [{
-    action = "<cmd>Neotree toggle<CR>";
-    key = "<leader>fe";
-  }
+  keymaps = [
+    {
+      action = "<cmd>Neotree toggle<CR>";
+      key = "<leader>fq";
+    }
+    {
+      action = "<cmd>Neotree<CR>";
+      key = "<leader>fe";
+    }
     # Lazygit
     {
       mode = "n";
@@ -33,7 +40,8 @@
       options = {
         desc = "LazyGit (root dir)";
       };
-    }];
+    }
+  ];
 
   plugins = {
 
@@ -51,7 +59,7 @@
     nvim-autopairs.enable = true;
     dashboard.enable = true;
     gitsigns.enable = true;
-    notify.enable = false;
+    notify.enable = true;
     which-key = {
       enable = true;
     };
@@ -72,7 +80,7 @@
     };
     noice = {
       # WARNING: This is considered experimental feature, but provides nice UX
-      enable = true;
+      enable = false;
       settings.presets = {
         bottom_search = true;
         command_palette = true;

@@ -10,3 +10,10 @@ sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
 > Wipe generations older than 3 days
 ```bash
 sudo nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 3d
+```
+> View home-manager logs
+
+```bash
+journalctl --user --unit home-manager-USERNAME.service
+```
+

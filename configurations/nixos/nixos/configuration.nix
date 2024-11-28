@@ -15,6 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+
   # Nix
 
   nix = {
@@ -30,7 +31,7 @@
     };
   };
 
-  programs.plasma = {
+  /* programs.plasma = {
     enable = true;
     workspace = {
       clickItemTo = "select";
@@ -40,12 +41,12 @@
       iconTheme = "Breeze-Dark";
       wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Qogir-ubuntu-dark/contents/image/1920x1080.jpg";
     };
-  };
+  }; */
 
 
   # fonts
-  fonts.fontDir.enable = true;
-  fonts.fontconfig.enable = true;
+  fonts.fontDir.enable = false;
+  fonts.fontconfig.enable = false;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
